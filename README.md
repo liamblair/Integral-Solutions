@@ -1,1 +1,1 @@
-# Integral-Solutions
+# Integral Solutions
