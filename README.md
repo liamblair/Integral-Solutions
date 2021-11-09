@@ -12,7 +12,10 @@ The system will house a given student’s current POS, as well as provide avenue
 This project is currently undergoing development and is scheduled to be completed in the Spring of 2022.
 
 ## Documentation
-See the `artifacts` folder for relevant documentation
+All relevant documentation can be found in the `artifacts` folder.
+* [System Requirements Specification (SRS)](artifacts/SRS%20-%20Iteration%204.pdf)
+* System Design Document (SDD)
+* User Interface Design Document (UIDD)
 
 ## Development
 To contribute to this project:
