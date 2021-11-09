@@ -12,7 +12,7 @@ The system will house a given student’s current POS, as well as provide avenue
 This project is currently undergoing development and is scheduled to be completed in the Spring of 2022.
 
 ## Documentation
-See the `artifacts` folder for relevant documentation
+See the `artifacts` folder for relevant documentation.
 
 ## Development
 To contribute to this project:
