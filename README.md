@@ -1,9 +1,9 @@
 # Integral Solutions
 
-insert logo here
+<img src="artifacts/IntegralSolutionsLogo.jpg?raw=true" height="200"/>
 
 ## Introduction
-Integral Solutions is a capstone group from the University of Maine. Our project is called POSAS (Programs of Study Approval System).
+Integral Solutions is a capstone group from the University of Maine. Our project is called POSAS (Program of Study Approval System).
 
 This capstone project serves as a step forward and a transition from the University of Maine’s physical storage of Programs of Study (POS) documents, to the digital storage of these documents. Specifically for the School of Computing and Information Science.
 
