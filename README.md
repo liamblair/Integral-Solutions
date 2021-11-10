@@ -1,6 +1,6 @@
 # Integral Solutions
 
-<img src="artifacts/IntegralSolutionsLogo.jpg?raw=true" height="200"/>
+<img src="static/IntegralSolutionsLogo.jpg?raw=true" height="300"/>
 
 ## Introduction
 Integral Solutions is a capstone group from the University of Maine. Our project is called POSAS (Program of Study Approval System).
@@ -12,8 +12,8 @@ The system will house a given student’s current POS, as well as provide avenue
 This project is currently undergoing development and is scheduled to be completed in the Spring of 2022.
 
 ## Documentation
-All relevant documentation can be found in the `artifacts` folder.
-* [System Requirements Specification (SRS)](artifacts/SRS%20-%20Iteration%204.pdf)
+All relevant documentation can be found in the `docs` folder.
+* [System Requirements Specification (SRS)](docs/SRS%20-%20Iteration%204.pdf)
 * System Design Document (SDD)
 * User Interface Design Document (UIDD)
 
@@ -43,4 +43,4 @@ Stakeholders:
 * Professor Terry Yoo - terry.yoo@maine.edu - COS 397/497 Professor
 
 ## License
-This project uses the following license: [Apache License 2.0](LICENSE)
+[Apache License 2.0](LICENSE)
