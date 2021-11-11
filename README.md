@@ -13,9 +13,12 @@ This project is currently undergoing development and is scheduled to be complete
 
 ## Documentation
 All relevant documentation can be found in the `docs` folder.
-* [System Requirements Specification (SRS)](docs/SRS%20-%20Iteration%204.pdf)
-* System Design Document (SDD)
+* [System Requirements Specification (SRS)](docs/SRS-Iteration5.pdf)
+* [System Design Document (SDD)](docs/SDD-Iteration1.pdf)
 * User Interface Design Document (UIDD)
+* Critical Design Review Document (CDRD)
+* User Manual
+* Admin Manual
 
 ## Development
 To contribute to this project:

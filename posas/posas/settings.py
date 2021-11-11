@@ -74,12 +74,11 @@ WSGI_APPLICATION = 'website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# placeholder db
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db',
-        'USER': 'liam',
+        'NAME': 'posas',
+        'USER': 'integralsolutions',
         'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '5432',
