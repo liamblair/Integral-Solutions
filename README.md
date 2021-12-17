@@ -1,6 +1,6 @@
 # Integral Solutions
 
-<img src="static/IntegralSolutionsLogo.jpg?raw=true" height="300"/>
+<img src="src/static/IntegralSolutionsLogo.jpg?raw=true" height="300"/>
 
 ## Introduction
 Integral Solutions is a capstone group from the University of Maine. Our project is called POSAS (Program of Study Approval System).
@@ -16,7 +16,8 @@ All relevant documentation can be found in the `docs` folder.
 * [System Requirements Specification (SRS)](docs/SRS-Version5.pdf)
 * [System Design Document (SDD)](docs/SDD-Version1.pdf)
 * [User Interface Design Document (UIDD)](docs/UIDD-Version1.pdf)
-* Critical Design Review Document (CDRD)
+* [Critical Design Review Document (CDRD)](docs/CDRD-Version1.pdf)
+* [Critical Design Review Presentation (CDR)](docs/CDR-Presentation.pdf)
 * User Manual
 * Admin Manual
 
@@ -36,7 +37,7 @@ After creating the virtual environment, use `pip install -r requirements.txt`.
 ## Our Team
 Developers:
 * Liam Blair - liam.blair@maine.edu
-* Mac Creamer - mackenzie.creamer@maine.edu
+* Mackenzie Creamer - mackenzie.creamer@maine.edu
 * Vincent King - vincent.king@maine.edu
 * Peter Riehl - peter.riehl@maine.edu
 * Aaron Wilde - aaron.wilde@maine.edu
