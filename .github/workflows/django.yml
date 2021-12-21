@@ -8,7 +8,7 @@ on:
     
 jobs:
   linting:
-    runs-on: ${{ matix.latest-list }}
+    runs-on: ${{ matrix.latest-list }}
     strategy:
       matrix:
         latest-list: [ubuntu-latest, windows-latest, macos-latest]
@@ -24,14 +24,14 @@ jobs:
         python -m black .
     - name: Lint with flake8
       run: |
-        python -m flask8 . --show-source --statistics --ignore=W391
+        python -m flake8 . --show-source --statistics --ignore=W391
   
   build:
     runs-on: ${{ matrix.latest-list }}
     strategy:
       max-parallel: 4
       matrix:
-        latest-list: [ubuntu-latet, windows-latest, macos-latest]
+        latest-list: [ubuntu-latest, windows-latest, macos-latest]
         python-version: [3.7, 3.8, 3.9]
 
     steps:
