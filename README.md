@@ -43,8 +43,8 @@ Developers:
 * Aaron Wilde - aaron.wilde@maine.edu
 
 Stakeholders:
-* Professor Harlan Onsrud - harlan.onsrud@maine.edu - Client
-* Professor Terry Yoo - terry.yoo@maine.edu - COS 397/497 Professor
+* Client - Professor Harlan Onsrud - harlan.onsrud@maine.edu
+* COS 397/497 Professor - Professor Terry Yoo - terry.yoo@maine.edu
 
 ## License
 [Apache License 2.0](LICENSE)
