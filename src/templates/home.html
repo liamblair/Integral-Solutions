@@ -4,10 +4,12 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+<!-- If client is logged in. Show thier unique homepage-->
 {% if user.is_authenticated %}
   Homepage for {{ user.username }}
   <p><a href="{% url 'logout' %}">Log Out</a></p>
-{% else %}
+<!-- If client is not logged in. Home will show a log in or register page-->
+  {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">Login</a>
   <a href="{% url 'register' %}"> Register</a>
