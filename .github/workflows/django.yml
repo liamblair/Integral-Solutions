@@ -50,6 +50,6 @@ jobs:
         pip install -r ./src/requirements.txt
     - name: Run Tests
       run: |
-        python ./src/manage.py test
+        python manage.py test
         
   
