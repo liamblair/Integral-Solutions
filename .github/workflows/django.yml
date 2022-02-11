@@ -50,4 +50,4 @@ jobs:
         pip install --upgrade -r ./src/requirements.txt
     - name: Run Tests
       run: |
-        python manage.py test
+        python ./src/manage.py test
