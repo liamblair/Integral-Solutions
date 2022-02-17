@@ -2,7 +2,7 @@ from django.db import models
 
 class GraduateCertificate(models.Model):
     
-    grad_program_of_study = models.Inte
+    pass
 
     def __str__(self) -> str:
         return
