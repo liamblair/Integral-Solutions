@@ -1,3 +1,10 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
 .container-base {
     display: flex;
@@ -26,6 +33,13 @@
     border-color: #222;
     border-style: solid;
     border-width: 0px 0px 2px 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "EB Garamond", serif;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0px;
+    line-height: 1.2;
 }
 
 .container-box{
@@ -110,4 +124,21 @@
 
 .row-base-help p {
     margin: 5px 0;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #003263;
+    overflow: visible;
+    opacity: 0.88;
+    border-radius: 8px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "EB Garamond", serif;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0px;
 }
