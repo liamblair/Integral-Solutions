@@ -1,14 +1,37 @@
 <!-- templates/registration/register.html -->
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+{% endblock %}
+
 {% block title %}Create Account{% endblock %}
 
 {% block content %}
-  <h2>Create Account</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
-    <a href="{% url 'home' %}"> Home</a>
-  </form>
+<form method="post">
+  {% csrf_token %}
+  <div class="container-base">
+    <div class="container-header">
+      <h2>Create Account</h2>
+    </div>
+    <div class="container-box">
+      {% for field in form %}
+      <div class="row-base">
+        {{ field.errors }}
+        {{ field.label_tag }} {{ field }}
+      </div>
+      {% if field.name == 'password1' %}
+      <div class="row-base-help">
+        <p>Password must contain the following:</p>
+        {{field.help_text|safe}}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <button type="submit">Submit</button>
+  <a href="{% url 'home' %}"> Home</a>
+</form>
 {% endblock %}

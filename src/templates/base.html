@@ -1,14 +1,19 @@
 <!-- templates/base.html -->
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
+  {% block extrahead %}
+  {% endblock %}
   <title>{% block title %}UMaine Graduate POSAS{% endblock %}</title>
 </head>
+
 <body>
   <main>
     {% block content %}
     {% endblock %}
   </main>
 </body>
+
 </html>
