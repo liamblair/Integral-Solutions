@@ -141,4 +141,11 @@ button {
     color: #ffffff;
     font-size: 20px;
     letter-spacing: 0px;
+    transition-duration: .2s;
+}
+
+button:hover {
+    color: black;
+    background-color: rgb(230, 227, 227);
+    cursor: pointer;
 }
