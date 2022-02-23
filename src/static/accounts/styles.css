@@ -279,6 +279,7 @@ form{
 .other-information h3 {
     margin: 5px;
     text-align: center;
+    font-size: 20px;
 }
 
 button {
@@ -388,4 +389,11 @@ button:hover {
 
 .container-box#errorPopup {
     height: 75%;
+}
+
+@media (max-width:800px){
+    .other-information h3 {
+        font-size: 16px;
+    }
+
 }
