@@ -7,6 +7,17 @@ from .forms import SignUpForm
 
 def register(request):
     register_form = SignUpForm()
+    context = {}
+    baseActFields = []
+    otherFields = []
+    baseActFieldNames = ['username', 'password1', 'password2']
+    for field in register_form:
+        if(field.name in baseActFieldNames):
+            baseActFields.append(field)
+        else:
+            otherFields.append(field)
+    context['baseFields'] = baseActFields
+    context['otherFields'] = otherFields
     if request.method=='POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
@@ -18,9 +29,16 @@ def register(request):
             return HttpResponseRedirect('/')    #We will send the user to a verification notification
                                                 #page, in the future, for now we send them to home page
         else:
-            print("Invalid Form")
-            context = {}
-            context['form'] = form
-            return render(request,'registration/register.html',context)
+            errors = []
+
+            for field in form:
+                if(field.errors):
+                    errors.append(field.errors)
+            
+            context['errors'] = errors
+
+            
+            return render(request,'registration/register.html',context=context)
     else:
-        return render(request,'registration/register.html',{'form':register_form})
+        context['form'] = register_form
+        return render(request,'registration/register.html',context=context)

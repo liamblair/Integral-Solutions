@@ -4,34 +4,71 @@
 {% load static %}
 
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'styles.css' %}">
+<link rel="stylesheet" href="{% static 'accounts/styles.css' %}">
 {% endblock %}
 
 {% block title %}Create Account{% endblock %}
 
 {% block content %}
+
 <form method="post">
   {% csrf_token %}
-  <div class="container-base">
-    <div class="container-header">
-      <h2>Create Account</h2>
+  <div class="form-all">
+    <div class="container-base">
+      <div class="container-header">
+        <h2>Create Account</h2>
+      </div>
+      <div class="container-box">
+        {% for field in baseFields %}
+        <div class="row-base">
+          {{ field.label_tag }} {{ field }}
+        </div>
+        {% if field.name == 'password1' %}
+        <div class="row-base-help">
+          <p>Password must contain the following:</p>
+          {{field.help_text|safe}}
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
     </div>
-    <div class="container-box">
-      {% for field in form %}
-      <div class="row-base">
-        {{ field.errors }}
-        {{ field.label_tag }} {{ field }}
+    <div class="container-other">
+      <div class="container-header">
+        <h2>Create Account</h2>
       </div>
-      {% if field.name == 'password1' %}
-      <div class="row-base-help">
-        <p>Password must contain the following:</p>
-        {{field.help_text|safe}}
-      </div>
-      {% endif %}
+      {% for field in otherFields %}
+      {{ field.label_tag }} {{ field }}
       {% endfor %}
     </div>
   </div>
-  <button type="submit">Create Account</button>
+  <button class="sub-btn" type="submit">Create Account</button>
   <a href="{% url 'home' %}"> Home</a>
 </form>
+
+{% if errors %}
+<div class="error-popup" id="errorPopup">
+  <div class="background-error">
+  </div>
+  <div class="container-error">
+    <div class="container-header">
+      <h2>Invalid Entries</h2>
+    </div>
+    <div class="container-box">
+      {% for error in errors %}
+      {{error}}
+      {% endfor %}
+      <button onclick="hidePopup()">Return</button>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+<script>
+  function hidePopup() {
+    var popup = document.getElementById("errorPopup");
+    popup.classList.toggle("hidden");
+  }
+</script>
+
 {% endblock %}
