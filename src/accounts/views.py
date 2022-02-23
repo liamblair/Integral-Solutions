@@ -5,6 +5,10 @@ from django.urls import reverse_lazy
 from django.views import generic
 from .forms import SignUpForm
 
+#Clean up fields in the morning, because you are referencing the pre
+#"request.POST" version of SignUpForm(), when a user attempts to submit
+#their form, it's empty. Additionally, they lose all of their populated
+#forms when they submit the form unsuccessfully.
 def register(request):
     register_form = SignUpForm()
     context = {}
@@ -16,8 +20,8 @@ def register(request):
             baseActFields.append(field)
         else:
             otherFields.append(field)
-    context['baseFields'] = baseActFields
-    context['otherFields'] = otherFields
+    context['empBaseFields'] = baseActFields
+    context['empOthFields'] = otherFields
     if request.method=='POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
