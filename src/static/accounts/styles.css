@@ -72,7 +72,8 @@ form{
 
 .row-base label {
     width: 50%;
-    height: 30px;
+    min-height: 30px;
+    height: fit-content;
     font-weight: 400;
     font-style: normal;
     font-family: "EB Garamond", serif;
@@ -139,15 +140,144 @@ form{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: fit-content;
+    height: auto;
     box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, 0.12);
     background-color: #ffffff;
     overflow: visible;
     border-radius: 20px;
     border: 2px solid #222;
     
-    min-width: 58%;
+    max-width: 58%;
+}
+
+.container-other-box{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 0px 0px 20px 20px;
+    margin: 3px;
+}
+
+.row-other-top {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.row-other-inputfields{
+    width: 33%;
+    display: flex;
+}
+
+.row-other-rest{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.other-information{
+    width: 20%;
+    height: 80%;
+    margin: auto 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.1);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.row-other-rest-fields{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.row-other-sub {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.container-other label {
+    max-width: 50%;
     width: fit-content;
+    height: 2em;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "EB Garamond", serif;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    padding: 2px 5px;
+}
+
+.container-other input {
+    background-color: rgb(235, 235, 235);
+    height: 3em;
+    margin: 5px;
+    padding: 2px 5px;
+    border-radius: 10px;
+    border: 0px;
+    border-color: rgba(128, 128, 128, 0.1);
+    color: rgb(51, 51, 51);
+}
+
+.content-field input#id_street {
+    width: 90%;
+}
+
+.content-field input#id_city {
+    width: 85%;
+}
+
+.content-field input#id_localCode {
+    width:20%;
+}
+
+.content-field input#id_zipCode {
+    width:10%;
+}
+
+.content-field input#id_countryCode {
+    width:10%;
+}
+
+.bottom {
+    justify-content: center;
+}
+
+.bottom label {
+    margin-left: 5%;
+}
+
+.bottom input {
+    margin-right: 5%;
+}
+
+.other-information h3 {
+    margin: 5px;
+    text-align: center;
 }
 
 button {
@@ -197,10 +327,9 @@ button:hover {
     width: fit-content;
     left: calc(50vw - var(--widthOffset));
 
-    --heightBase: 40%;
+    --heightBase: 45%;
     --heightOffset: calc(var(--heightBase)/2);
-    min-height: var(--heightBase);
-    height: fit-content;
+    height: var(--heightBase);
     top: calc(50vh - var(--heightOffset));
 
     display: flex;
@@ -250,3 +379,12 @@ button:hover {
     align-items: center;
 }
 
+.container-box-errors{
+    overflow-y: auto;
+    height: 80%;
+    margin-bottom: 5%;
+}
+
+.container-box#errorPopup {
+    height: 75%;
+}

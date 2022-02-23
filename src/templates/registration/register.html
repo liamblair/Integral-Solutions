@@ -34,15 +34,42 @@
     </div>
     <div class="container-other">
       <div class="container-header">
-        <h2>Create Account</h2>
+        <h2>Personal Information Setup</h2>
       </div>
-      {% for field in otherFields %}
-      {{ field.label_tag }} {{ field }}
-      {% endfor %}
+      <div class="container-other-box">
+        <div class="row-other-top">
+          {% for field in otherFields0 %}
+          <div class="row-other-inputfields">
+            {{ field.label_tag }} {{ field }}
+          </div>
+          {% endfor %}
+        </div>
+        <div class="row-other-rest">
+          <div class="other-information">
+            <h3>{{ infoString}}</h3>
+          </div>
+          <div class="row-other-rest-fields">
+            <div class="row-other-sub content-field">
+              {% for field in otherFields1 %}
+              {{ field.label_tag }} {{ field }}
+              {% endfor %}
+            </div>
+            <div class="row-other-sub content-field">
+              {% for field in otherFields2 %}
+              {{field.label_tag}} {{field}}
+              {% endfor %}
+            </div>
+            <div class="row-other-sub content-field bottom">
+              {% for field in otherFields3 %}
+              {{field.label_tag}} {{field}}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <button class="sub-btn" type="submit">Create Account</button>
-  <a href="{% url 'home' %}"> Home</a>
 </form>
 
 {% if errors %}
@@ -53,10 +80,12 @@
     <div class="container-header">
       <h2>Invalid Entries</h2>
     </div>
-    <div class="container-box">
-      {% for error in errors %}
-      {{error}}
-      {% endfor %}
+    <div class="container-box" id="errorPopup">
+      <div class=container-box-errors>
+        {% for error in errors %}
+        {{error}}
+        {% endfor %}
+      </div>
       <button onclick="hidePopup()">Return</button>
     </div>
   </div>
