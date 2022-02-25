@@ -28,6 +28,12 @@ jobs:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
       run: |
         python -m black .
+        
+    - name: Lint with flake8
+      env:
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
+      run: |
+        python -m flake8 . --show-source --statistics --ignore=W391
    
   
   build:
