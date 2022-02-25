@@ -1,0 +1,94 @@
+.header-container {
+    padding-top: 0;
+    margin: 0 0 20px 0;
+    width: 100vw;
+    height: 85px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    box-shadow: 3px 5px 8px 1px rgba(0, 0, 0, 0.25);
+    background-color: #b0d7ff;
+    overflow: visible;
+    border: 8px solid #003263;
+}
+
+.logo-container {
+    display: flex;
+    width: 200px;
+    height: 65px;
+    margin: 2px;
+    background-color: #003263;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width:58px;
+    height: 77px;
+    margin: 2px 0 0 3px;
+}
+
+.logo-container-text{
+    font-weight: 400;
+    font-style: normal;
+    font-family: "EB Garamond", serif;
+    color: #ffffff;
+    padding: 13px 0 0 0;
+}
+
+#front_header{
+    margin: 0;
+    margin-top: -8px;
+    padding: 0;
+    font-weight: 200;
+}
+
+h4#front_header{
+    font-size: 1em;
+}
+
+h1#front_header{
+    font-size: 2.65em;
+}
+
+.underheader-header {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+h1#underheader-text {
+    font-weight: 400;
+    font-style: normal;
+    font-family: "EB Garamond", serif;
+    color: #000000;
+    font-size: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 0;
+    border-bottom: rgba(112,120,137,0.3) 5px solid;
+}
+
+.footer-page{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 75px;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 3px 5px 8px 1px rgba(0, 0, 0, 0.25);
+    background-color: #b0d7ff;
+    overflow: visible;
+    border-color: #003263;
+    border-style: solid;
+    border-top-width: 8px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+html, body {
+    margin : 0;
+    padding : 0;
+}

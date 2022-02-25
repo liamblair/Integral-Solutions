@@ -2,18 +2,46 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
   <meta charset="utf-8">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
   {% block extrahead %}
   {% endblock %}
   <title>{% block title %}UMaine Graduate POSAS{% endblock %}</title>
 </head>
 
 <body>
+  <header class="header-container">
+    <a class="logo-container" href="{% url 'home' %}">
+      <img src="{% static 'UMaineLogo.png' %}" alt="UMaine Crest Logo">
+      <div class="logo-container-text">
+        <h4 id="front_header">Graduate School</h4>
+        <h1 id="front_header">POSAS</h1>
+      </div>
+    </a>
+    {% if user.is_authenticated %}
+    Homepage for {{ user.username }}
+    <p><a href="{% url 'logout' %}">Log Out</a></p>
+    <!-- If client is not logged in. Home will show a log in or register page-->
+    {% endif %}
+    <div></div>
+  </header>
+  {% block toplayer %}
+  <div class="underheader-header">
+    <h1 id="underheader-text">
+      UMaine Digital Program of Study Approval System
+    </h1>
+  </div>
+  {%endblock%}
   <main>
     {% block content %}
     {% endblock %}
   </main>
+  <footer class="footer-page">
+
+  </footer>
 </body>
 
 </html>
