@@ -2,18 +2,63 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
   <meta charset="utf-8">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
   {% block extrahead %}
   {% endblock %}
   <title>{% block title %}UMaine Graduate POSAS{% endblock %}</title>
 </head>
 
 <body>
+  <header class="header-container">
+    <a class="logo-container" href="{% url 'home' %}">
+      <img class="crest" src="{% static 'UMaineLogo.png' %}" alt="UMaine Crest Logo">
+      <div class="logo-container-text">
+        <h4 id="front_header">Graduate School</h4>
+        <h1 id="front_header">POSAS</h1>
+      </div>
+    </a>
+    {% if user.is_authenticated %}
+    <div class="header-control-panel">
+      <div class="control-panel-display">
+        <h4>
+          {{ user.username }}
+        </h4>
+      </div>
+      <div class="control-panel-navigation">
+        <a class="navigation-nav-opts" href="{% url 'home' %}">
+          <h3>Settings</h3>
+          <img class="icon" src="{% static 'settings.png' %}" id="cog" alt="Settings Icon">
+        </a>
+        <a class="navigation-nav-opts" href="{% url 'logout' %}">
+          <h3>Log Out</h3>
+          <img class="icon" src="{% static 'logOut.png' %}" id="door" alt="Log Out Icon">
+        </a>
+      </div>
+    </div>
+    {% endif %}
+    <div></div>
+  </header>
+  {% block toplayer %}
+  <div class="underheader-header">
+    <h1 class="large" id="underheader-text">
+      UMaine Digital Program of Study Approval System
+    </h1>
+    <h1 class="small" id="underheader-text">
+      UMaine POSAS
+    </h1>
+  </div>
+  {%endblock%}
   <main>
     {% block content %}
     {% endblock %}
   </main>
+  <footer class="footer-page">
+
+  </footer>
 </body>
 
 </html>
