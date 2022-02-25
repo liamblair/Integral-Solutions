@@ -54,7 +54,7 @@ h1#front_header{
 }
 
 .underheader-header {
-    width: 70%;
+    width: 90%;
     text-align: center;
     margin: 0 auto 10px auto;
 }
@@ -69,6 +69,26 @@ h1#underheader-text {
     text-align: center;
     margin-top: 0;
     border-bottom: rgba(112,120,137,0.3) 5px solid;
+}
+
+.small {
+    display: none;
+}
+
+.large {
+    visibility: visible;
+}
+
+@media(max-width: 1160px) {
+    .large {
+        display: none;
+        visibility: hidden;
+    }
+    .small {
+        visibility: visible;
+        display: block;
+    }
+
 }
 
 .footer-page{
