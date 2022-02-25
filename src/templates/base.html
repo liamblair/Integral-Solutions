@@ -15,16 +15,30 @@
 <body>
   <header class="header-container">
     <a class="logo-container" href="{% url 'home' %}">
-      <img src="{% static 'UMaineLogo.png' %}" alt="UMaine Crest Logo">
+      <img class="crest" src="{% static 'UMaineLogo.png' %}" alt="UMaine Crest Logo">
       <div class="logo-container-text">
         <h4 id="front_header">Graduate School</h4>
         <h1 id="front_header">POSAS</h1>
       </div>
     </a>
     {% if user.is_authenticated %}
-    Homepage for {{ user.username }}
-    <p><a href="{% url 'logout' %}">Log Out</a></p>
-    <!-- If client is not logged in. Home will show a log in or register page-->
+    <div class="header-control-panel">
+      <div class="control-panel-display">
+        <h4>
+          {{ user.username }}
+        </h4>
+      </div>
+      <div class="control-panel-navigation">
+        <a class="navigation-nav-opts" href="{% url 'home' %}">
+          <h3>Settings</h3>
+          <img class="icon" src="{% static 'settings.png' %}" id="cog" alt="Settings Icon">
+        </a>
+        <a class="navigation-nav-opts" href="{% url 'logout' %}">
+          <h3>Log Out</h3>
+          <img class="icon" src="{% static 'logOut.png' %}" id="door" alt="Log Out Icon">
+        </a>
+      </div>
+    </div>
     {% endif %}
     <div></div>
   </header>
