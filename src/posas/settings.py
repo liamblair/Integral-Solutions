@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
+    'forms',
 ]
 
 MIDDLEWARE = [
@@ -148,4 +149,8 @@ else:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'home'
+
+AUTH_USER_MODEL = 'accounts.User'
+
 LOGOUT_REDIRECT_URL = 'login'
+
