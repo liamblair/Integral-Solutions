@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 from django.views.generic.base import TemplateView
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('', TemplateView.as_view(template_name='home.html'), name='home')
+    path('', RedirectView.as_view(url='accounts/login/', permanent=True)),
+    path('home/', TemplateView.as_view(template_name='home.html'), name='home')
 ]
