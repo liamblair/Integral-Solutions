@@ -1,7 +1,10 @@
 from django.urls import path
 
-from .views import RegisterView
+#From base folder (.) import views[.py]
+from . import views
 
+#Standard url pattern of "file path", "template/rendered image",
+#and url name for Django purposes
 urlpatterns = [
-    path('register/', RegisterView.as_view(), name='register'),
+    path('register/', views.register, name='register'),
 ]

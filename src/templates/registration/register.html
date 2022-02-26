@@ -1,14 +1,115 @@
 <!-- templates/registration/register.html -->
+<!--
+  Context involves the following:
+  csrf_token = the cross site reference token, protects server instance
+  baseFields = fields on the left for account creation, list format
+  field = django field object, dictionary format, there are dictionaries within it as well
+  otherFields0..3 = fields shown on left, broken up by row, for formatting.
+                    these are list objects as well. Fields within them are django fields
+  errors = list of error messages, from the field objects' dictionary key "error"
+
+  The rest of this is standard html
+-->
+
 {% extends 'base.html' %}
+
+{% load static %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'accounts/styles.css' %}">
+{% endblock %}
 
 {% block title %}Create Account{% endblock %}
 
 {% block content %}
-  <h2>Create Account</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
-    <a href="{% url 'home' %}"> Home</a>
-  </form>
+
+<form method="post">
+  {% csrf_token %}
+  <div class="form-all">
+    <div class="container-base">
+      <div class="container-header">
+        <h2>Create Account</h2>
+      </div>
+      <div class="container-box">
+        {% for field in baseFields %}
+        <div class="row-base">
+          {{ field.label_tag }} {{ field }}
+        </div>
+        {% if field.name == 'password1' %}
+        <div class="row-base-help">
+          <p>Password must contain the following:</p>
+          {{field.help_text|safe}}
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="container-other">
+      <div class="container-header">
+        <h2>Personal Information Setup</h2>
+      </div>
+      <div class="container-other-box">
+        <div class="row-other-top">
+          {% for field in otherFields0 %}
+          <div class="row-other-inputfields">
+            {{ field.label_tag }} {{ field }}
+          </div>
+          {% endfor %}
+        </div>
+        <div class="row-other-rest">
+          <div class="other-information">
+            <h3>{{ infoString}}</h3>
+          </div>
+          <div class="row-other-rest-fields">
+            <div class="row-other-sub content-field">
+              {% for field in otherFields1 %}
+              {{ field.label_tag }} {{ field }}
+              {% endfor %}
+            </div>
+            <div class="row-other-sub content-field">
+              {% for field in otherFields2 %}
+              {{field.label_tag}} {{field}}
+              {% endfor %}
+            </div>
+            <div class="row-other-sub content-field bottom">
+              {% for field in otherFields3 %}
+              {{field.label_tag}} {{field}}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="sub-btn" type="submit">Create Account</button>
+</form>
+
+{% if errors %}
+<div class="error-popup" id="errorPopup">
+  <div class="background-error">
+  </div>
+  <div class="container-error">
+    <div class="container-header">
+      <h2>Invalid Entries</h2>
+    </div>
+    <div class="container-box" id="errorPopup">
+      <div class=container-box-errors>
+        {% for error in errors %}
+        {{error}}
+        {% endfor %}
+      </div>
+      <button onclick="hidePopup()">Return</button>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+<script>
+  function hidePopup() {
+    var popup = document.getElementById("errorPopup");
+    popup.classList.toggle("hidden");
+  }
+</script>
+
 {% endblock %}
