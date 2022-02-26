@@ -3,7 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 
 from .models import User
 from .forms import UserCreationForm, UserChangeForm
-class UserAdmin(UserAdmin):
+class CustomUserAdmin(UserAdmin):
     add_form = UserCreationForm
     form = UserChangeForm
     model = User
@@ -26,4 +26,4 @@ class UserAdmin(UserAdmin):
     ordering = ('email',)
     
 
-admin.site.register(User, UserAdmin)
+admin.site.register(User, CustomUserAdmin)
