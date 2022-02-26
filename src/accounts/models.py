@@ -42,5 +42,6 @@ class Student(models.Model):
     street_address = models.CharField(max_length=50)
     city = models.CharField(max_length=35)
     state = models.CharField(max_length=2)
+    country_code = models.CharField(max_length=2)
     zip_code = models.CharField(max_length=5)
 

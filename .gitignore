@@ -136,3 +136,6 @@ dmypy.json
 .env
 
 .vscode
+
+# Django migrations
+migrations/

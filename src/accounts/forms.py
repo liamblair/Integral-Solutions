@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
@@ -51,6 +51,9 @@ class SignUpForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ("username", "password1", "password2","firstName",
-                    "lastName","phoneNum","street","city","localCode",
-                    "zipCode","countryCode")
+        fields = ("email",)
+
+class UserChangeForm(UserChangeForm):
+    class Meta:
+        model = User
+        fields = ("email",)

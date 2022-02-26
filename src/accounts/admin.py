@@ -2,9 +2,9 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
 from .models import User
-from .forms import UserCreationForm, UserChangeForm
+from .forms import SignUpForm, UserChangeForm
 class CustomUserAdmin(UserAdmin):
-    add_form = UserCreationForm
+    add_form = SignUpForm
     form = UserChangeForm
     model = User
     list_display = ('email', 'is_staff', 'is_active',)
