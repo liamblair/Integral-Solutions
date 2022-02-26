@@ -14,7 +14,8 @@
 
 <body>
   <header class="header-container">
-    <a class="logo-container" href="{% url 'login' %}">
+    <a class="logo-container" {% if user.is_authenticated %} href="{% url 'home' %}" {% else %} href="{% url 'login' %}"
+      {% endif %}>
       <img class="crest" src="{% static 'UMaineLogo.png' %}" alt="UMaine Crest Logo">
       <div class="logo-container-text">
         <h4 id="front_header">Graduate School</h4>
