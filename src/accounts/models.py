@@ -32,7 +32,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS =['first_name', 'last_name', 'country_code', 'zip_code', 'local_code', 'street_address']
+    REQUIRED_FIELDS =['first_name', 'last_name', 'country_code', 'zip_code', 'local_code', 'street_address','phone',]
 
     objects = UserManager()
 
