@@ -21,7 +21,7 @@ def register(request):
     otherFields3 = []
     infoString = 'Please give your current mailing address. If it changes during your time using this service, you can go into account settings to change it.'
     counter = 0
-    baseActFieldNames = ['username', 'password1', 'password2']
+    baseActFieldNames = ['email', 'password1', 'password2']
 
     #If the user submitted their form
     if request.method=='POST':
