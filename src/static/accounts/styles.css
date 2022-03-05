@@ -1,9 +1,14 @@
 form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 10px;
+    height: fit-content;
+    max-height: 60vh;
+}
+
+h2{
+    margin: .3em;
 }
 
 .form-all {
@@ -12,6 +17,9 @@ form{
     justify-content: space-around;
     width: 100vw;
     height: fit-content;
+    max-height: 70vh;
+    overflow-y: auto;
+    gap: 10px;
 }
 
 .container-base {
@@ -19,7 +27,6 @@ form{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 32%;
     height: fit-content;
     box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, 0.12);
     background-color: #ffffff;
@@ -92,6 +99,7 @@ form{
 .row-base input {
     background-color: rgb(235, 235, 235);
     height: 30px;
+    width: 70%;
     margin: 5px;
     padding: 0 5px;
     border-radius: 10px;
@@ -106,7 +114,7 @@ form{
 }
 
 .row-base-help {
-    width: 60%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,7 +148,7 @@ form{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: auto;
+    height: fit-content;
     box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, 0.12);
     background-color: #ffffff;
     overflow: visible;
@@ -186,9 +194,8 @@ form{
 }
 
 .other-information{
-    width: 20%;
-    height: 80%;
-    margin: auto 20px;
+    width: 28%;
+    margin: auto 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -200,7 +207,6 @@ form{
 
 .row-other-rest-fields{
     width: 75%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -236,7 +242,7 @@ form{
     background-color: rgb(235, 235, 235);
     height: 3em;
     margin: 5px;
-    width: 60%;
+    width: 100%;
     padding: 2px 5px;
     border-radius: 10px;
     border: 0px;
@@ -254,14 +260,6 @@ form{
 
 .content-field input#id_localCode {
     width:35%;
-}
-
-.content-field input#id_zipCode {
-    width:40%;
-}
-
-.content-field input#id_countryCode {
-    width:40%;
 }
 
 .bottom {
@@ -396,4 +394,11 @@ button:hover {
         font-size: 16px;
     }
 
+    label{
+        font-size: .8em!important;
+    }
+
+    .container-other label{
+        height:auto;
+    }
 }
