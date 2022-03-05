@@ -15,8 +15,15 @@ class User(AbstractBaseUser, PermissionsMixin):
     """
 
     email = models.EmailField(_('Email Address'), unique=True)
-    name = models.CharField(max_length=150)
-    is_student = models.BooleanField('student status', default=False)
+    first_name = models.CharField(max_length=150)
+    last_name = models.CharField(max_length=150)
+    phone_regex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
+    phone = models.CharField(validators=[phone_regex], max_length=16, unique=True)
+    street_address = models.CharField(max_length=50)
+    city = models.CharField(max_length=35)
+    local_code = models.CharField(max_length=2)
+    country_code = models.CharField(max_length=2)
+    zip_code = models.CharField(max_length=5)
     is_coord = models.BooleanField('grad coord status', default=False)
     is_comm = models.BooleanField('committee member status', default=False)
     is_advisor = models.BooleanField('major advisor status', default=False)
@@ -25,23 +32,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS =['name']
+    REQUIRED_FIELDS =['first_name', 'last_name', 'country_code', 'zip_code', 'local_code', 'street_address']
 
     objects = UserManager()
 
-
-class Student(models.Model):
-    """
-    Student model with the extra identifying info
-    """
-
-    # Might change address fields to django-address later
-    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-    phone_regex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
-    phone = models.CharField(validators=[phone_regex], max_length=16, unique=True)
-    street_address = models.CharField(max_length=50)
-    city = models.CharField(max_length=35)
-    state = models.CharField(max_length=2)
-    country_code = models.CharField(max_length=2)
-    zip_code = models.CharField(max_length=5)
+    
 
