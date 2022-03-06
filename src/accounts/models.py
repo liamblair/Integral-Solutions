@@ -18,7 +18,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150)
     phone_regex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
-    phone = models.CharField(validators=[phone_regex], max_length=16, unique=True)
+    phone = models.CharField(validators=[phone_regex], max_length=16, unique=False)
     street_address = models.CharField(max_length=50)
     city = models.CharField(max_length=35)
     local_code = models.CharField(max_length=2)
