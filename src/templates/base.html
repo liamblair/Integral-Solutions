@@ -7,6 +7,7 @@
   <meta charset="utf-8">
   {% load static %}
   <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
   {% block extrahead %}
   {% endblock %}
   <title>{% block title %}UMaine Graduate POSAS{% endblock %}</title>
@@ -26,7 +27,7 @@
     <div class="header-control-panel">
       <div class="control-panel-display">
         <h4>
-          {{ user.name }}
+          {{ user.first_name }}
         </h4>
       </div>
       <div class="control-panel-navigation">

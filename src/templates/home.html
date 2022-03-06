@@ -8,10 +8,24 @@
 {% if user.is_authenticated %}
 <div class="Container">
     <div class="Container-Header">
-        {{user.first_name}}
+        
     </div>
     <div class="POS-Table-Header">
-
+        <div class="Header-Info">
+            <p>Type</p>
+        </div>
+        <div class="Header-Info">
+            <p>Started</p>
+        </div>
+        <div class="Header-Info">
+            <p>Submitted</p>
+        </div>
+        <div class="Header-Info">
+            <p>Status</p>
+        </div>
+        <div class="Header-Action">
+            <p>Action</p>
+        </div>
     </div>
     <div class="POS-Table-Body">
 
