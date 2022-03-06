@@ -1,0 +1,16 @@
+<!-- templates/forms/course_work/gradcoursework.html -->
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'accounts/styles.css' %}">
+{% endblock %}
+
+{% block title %}Graduate Course Work{% endblock %}
+
+{% block content %}
+
+<form method="post">
+  {% csrf_token %}
