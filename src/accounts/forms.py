@@ -20,34 +20,34 @@ class SignUpForm(UserCreationForm):
 
     #Field instantation for all fields that don't already have estbalished user model form fields
     #All fields follow the same layout of "Widget" and "Label", some fields use custom regex validators
-    firstName = forms.CharField(widget=forms.TextInput(attrs={'required':True}),
+    first_name = forms.CharField(widget=forms.TextInput(attrs={'required':True}),
                                     label=_(u'First Name*'))
-    lastName = forms.CharField(widget=forms.TextInput(attrs={'required':True}),
+    last_name = forms.CharField(widget=forms.TextInput(attrs={'required':True}),
                                     label=_(u'Last Name*'))
-    phoneNum = forms.CharField(widget=forms.TextInput(attrs={'required':False}),
+    phone = forms.CharField(widget=forms.TextInput(attrs={'required':False}),
                                     label=_(u'Phone Number'),
                                     validators=[RegexValidator(regex=internationalPhoneNumRegEx,
                                                                 message=phoneNumMsg)])
-    street = forms.CharField(widget=forms.TextInput(attrs={'required':True}),
+    street_address = forms.CharField(widget=forms.TextInput(attrs={'required':True}),
                                     label=_(u'Street*'))
     city = forms.CharField(widget=forms.TextInput(attrs={'required':True}),
                                     label=_(u'City*'))
-    localCode = forms.CharField(widget=forms.TextInput(attrs={'required':True}),
+    local_code = forms.CharField(widget=forms.TextInput(attrs={'required':True}),
                                     label=_(u'State/Territory*'),
                                     validators=[RegexValidator(regex=localCodeRegex,
                                                                 message=localCodeMsg)])
-    zipCode = forms.CharField(widget=forms.TextInput(attrs={'required':True}),
+    zip_code = forms.CharField(widget=forms.TextInput(attrs={'required':True}),
                                     label=_(u'Zip/Postal Code*'),
                                     validators=[RegexValidator(regex=zipCodeRegex,
                                                                 message=zipCodeMsg)])
-    countryCode = forms.CharField(widget=forms.TextInput(attrs={'required':True}),
+    country_code = forms.CharField(widget=forms.TextInput(attrs={'required':True}),
                                     label=_(u'Country Code*'),
                                     validators=[RegexValidator(regex=countryCode,
                                                                 message=countryCodeMsg)])
 
     class Meta:
         model = models.User
-        fields = ("email",)
+        fields = ("email","password1","password2","first_name","last_name","phone","street_address","city","local_code","zip_code","country_code")
 
 class UserChangeForm(UserChangeForm):
     class Meta:

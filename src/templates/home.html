@@ -6,10 +6,19 @@
 {% block content %}
 <!-- If client is logged in. Show their unique homepage-->
 {% if user.is_authenticated %}
-Homepage for {{ user.username }}
-<p><a href="{% url 'logout' %}">Log Out</a></p>
-<!-- If client is not logged in. Home will show a log in or register page-->
+<div class="Container">
+    <div class="Container-Header">
+        {{user.first_name}}
+    </div>
+    <div class="POS-Table-Header">
+
+    </div>
+    <div class="POS-Table-Body">
+
+    </div>
+</div>
 {% else %}
+<!-- If client is not logged in. Home will show a log in or register page-->
 <p>You are not logged in</p>
 <a href="{% url 'login' %}">Login</a>
 <a href="{% url 'register' %}"> Register</a>
