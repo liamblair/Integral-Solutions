@@ -8,7 +8,6 @@ from django.core.validators import RegexValidator
 from .managers import UserManager
 
 
-
 class User(AbstractBaseUser, PermissionsMixin):
     """
     New User model with email as the primary qualifier
@@ -24,6 +23,10 @@ class User(AbstractBaseUser, PermissionsMixin):
     local_code = models.CharField(max_length=2)
     country_code = models.CharField(max_length=2)
     zip_code = models.CharField(max_length=5)
+
+    # this needs to be added but db cant add after being initialized
+    #student_id = models.IntegerField()
+
     is_coord = models.BooleanField('grad coord status', default=False)
     is_comm = models.BooleanField('committee member status', default=False)
     is_advisor = models.BooleanField('major advisor status', default=False)
