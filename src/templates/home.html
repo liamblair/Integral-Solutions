@@ -1,17 +1,19 @@
 <!-- templates/home.html -->
 {% extends 'base.html' %}
 
+{% load static %}
 {% block title %}Home{% endblock %}
+{% block extrahead %}<link rel="stylesheet" href="{% static 'home/styles.css' %}">{% endblock %}
 
 {% block content %}
 <!-- If client is logged in. Show their unique homepage-->
 {% if user.is_authenticated %}
 <div class="Container">
     <div class="Container-Header">
-        
+        <h2>Programs of Study (POS)</h2>
     </div>
     <div class="POS-Table-Header">
-        <div class="Header-Info">
+        <div class="Header-Info-Type">
             <p>Type</p>
         </div>
         <div class="Header-Info">
@@ -28,8 +30,136 @@
         </div>
     </div>
     <div class="POS-Table-Body">
-
+        <!--
+            This will be a django for loop that pulls from the database in the future. For now it's a placeholder w/ what's on framer
+        -->
+        <div class="POS-Row">
+            <div class="POS-Info-Type">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info-Action">
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Review
+                </a>
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Edit
+                </a>
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Send Reminders
+                </a>
+            </div>
+        </div><div class="POS-Row">
+            <div class="POS-Info-Type">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info-Action">
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Review
+                </a>
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Edit
+                </a>
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Send Reminders
+                </a>
+            </div>
+        </div><div class="POS-Row">
+            <div class="POS-Info-Type">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info-Action">
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Review
+                </a>
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Edit
+                </a>
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Send Reminders
+                </a>
+            </div>
+        </div><div class="POS-Row">
+            <div class="POS-Info-Type">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info-Action">
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Review
+                </a>
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Edit
+                </a>
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Send Reminders
+                </a>
+            </div>
+        </div>
+        <div class="POS-Row">
+            <div class="POS-Info-Type">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info">
+                <p>"POS-Info-Type"</p>
+            </div>
+            <div class="POS-Info-Action">
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Review
+                </a>
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Edit
+                </a>
+                <a class="POS-Action-Button" href="{% url 'logout' %}">
+                    Send Reminders
+                </a>
+            </div>
+        </div>
     </div>
+    <a class="create-POS-btn" href="{% url 'logout' %}">
+        <h3>Create New POS</h3>
+        <img class="icon" src="{% static 'home/createPOS.png' %}" id="pencil" alt="Create POS Icon">
+    </a>
 </div>
 {% else %}
 <!-- If client is not logged in. Home will show a log in or register page-->

@@ -1,0 +1,206 @@
+.Container {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    min-width: 75vw;
+    height: 60vh;
+    width: fit-content;
+    box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, 0.12);
+    background-color: #ffffff;
+    overflow: visible;
+    border-radius: 20px;
+    border: 2px solid #222;
+    margin: 0 auto;
+}
+
+.Container-Header {
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #b0d7ff;
+    overflow: visible;
+    border-radius: 20px 20px 0px 0px;
+    border-color: #222;
+    border-style: solid;
+    border-top-width: 0px;
+    border-bottom-width: 2px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.POS-Table-Header {
+    flex-shrink: 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    background-color: #c9c9c9;
+    overflow: hidden;
+    padding-top: 5px;
+    border-bottom: 1px solid black;
+}
+
+.Header-Info-Type{
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 20%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 10px 32px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.Header-Info {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 12%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 10px 32px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.Header-Action {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 35%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 10px 32px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+    margin-left: 5%;
+}
+
+.POS-Table-Body{
+    width: 100%;
+    max-height: 60%;
+    overflow-y: auto;
+}
+
+.create-POS-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 1px 8px;
+    box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+    border: 2px solid #222;
+    background-color: rgb(0, 50, 99);
+    text-decoration: none;
+    color: white;
+    margin:6px auto;
+}
+
+.icon{
+    border-radius: 15px;
+    padding: 2px;
+}
+
+.POS-Row {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: #ffffff;
+    overflow: hidden;
+    border-color: #222;
+    border-style: dashed;
+    border-top-width: 0px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.POS-Info-Type{
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 20%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 10px 32px 10px;
+    background-color: rgba(128, 128, 128, 0.1);
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.POS-Info {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 12%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 10px 32px 10px;
+    background-color: rgba(128, 128, 128, 0.1);
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.POS-Info-Action{
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 35%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 10px 32px 10px;
+    margin-left: 5%;
+    background-color: rgba(188, 189, 192,.3);
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    gap:10px;
+}
+
+.POS-Action-Button {
+    flex-shrink: 0;
+    width: 30%;
+    height: 50px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #003263;
+    overflow: visible;
+    color:white;
+    opacity: 0.88;
+    border-radius: 8px;
+    text-decoration: none;
+  }
