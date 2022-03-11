@@ -16,14 +16,16 @@ This project is currently undergoing development and is scheduled to be complete
 
 All relevant documentation can be found in the `docs` folder.
 
+### Deliverables
+
 * [System Requirements Specification (SRS)](docs/SRS-Version5.pdf)
 * [System Design Document (SDD)](docs/SDD-Version1.pdf)
 * [User Interface Design Document (UIDD)](docs/UIDD-Version1.pdf)
 * [Critical Design Review Document (CDRD)](docs/CDRD-Version1.pdf)
 * [Critical Design Review Presentation (CDR)](docs/CDR-Presentation.pdf)
-* Code Inspection Report
-* User Guide
-* Admin Manual
+* [Code Inspection Report (CIR)](docs/CIR-Version1.pdf)
+* User Guide (UG)
+* Admin Manual (AM)
 
 ## Development
 
