@@ -32,7 +32,7 @@ jobs:
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
       run: |
-        python -m flake8 . --show-source --statistics --ignore=W391
+        python -m flake8
   
   build:
     runs-on: ${{ matrix.latest-list }}
