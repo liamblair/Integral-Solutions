@@ -21,6 +21,8 @@ h2{
     overflow-y: auto;
     align-items: center;
     gap: 10px;
+    margin: 0px;
+    padding-top: 30px;
 }
 
 .container-base {
