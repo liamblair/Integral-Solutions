@@ -1,14 +1,46 @@
 <!-- templates/registration/login.html -->
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'login/styles.css' %}">
+{% endblock %}
+
 {% block title %}Login{% endblock %}
 
+
 {% block content %}
-<h2>Welcome to UMaine SCIS Online POS System</h2>
-<h2>Log In</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Log In</button>
-</form>
+<div class="container-container">
+  <div class="container-login">
+    <div class="container-header">
+      <h2>Login Information</h2>
+    </div>
+    <div class="container-base">
+      <form method="post" class="sign-in-form">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="row-base">
+          {{ field.label_tag }} {{ field }}
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn">Sign In</button>
+      </form>
+      <a class="login-option" href="{% url 'register' %}">Forgot Password?</a>
+      <a class="login-option" href="{% url 'register' %}">Need to create an account?</a>
+    </div>
+  </div>
+  <div class="container-information">
+    <div class="container-header">    
+      <h2>
+        Current and Prospective Students
+      </h2>
+    </div>
+    <div class="container-word-holder">
+      <p>In its time, the University of Maine has housed many students, all with one or more Programs of Study. This website seeks to accommodate all such students' information to avoid the burdensome overhead for students and faculty alike. If, at any point, you have difficulty with this system, reach out to the graduate school at graduate@maine.edu.
+        
+        Please note: This system is currently separate from the institution's UMS integration, you will need a new account that you can create on the left.</p>
+    </div>
+  </div>
+</div>
 {% endblock %}
