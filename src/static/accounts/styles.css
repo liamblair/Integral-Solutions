@@ -196,7 +196,7 @@ h2{
 
 .other-information{
     width: 28%;
-    margin: auto 10px;
+    margin: 15px 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -244,6 +244,7 @@ h2{
     height: 3em;
     margin: 5px;
     width: 100%;
+    font-size: 16px;
     padding: 2px 5px;
     border-radius: 10px;
     border: 0px;
