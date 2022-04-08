@@ -281,27 +281,24 @@ h2{
     font-size: 20px;
 }
 
-button {
+button{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    background-color: #003263;
-    overflow: visible;
-    opacity: 0.88;
-    border-radius: 8px;
-    font-weight: 400;
-    font-style: normal;
-    font-family: "EB Garamond", serif;
-    color: #ffffff;
-    font-size: 20px;
-    letter-spacing: 0px;
-    transition-duration: .1s;
+    box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    padding: 15px 30px;
+    border: 2px solid #222;
+    background-color: rgb(0, 50, 99);
+    color:white;
+    margin: 5px auto;
+    font-weight: bolder;
+    font-size: larger;
 }
 
+
 button:hover {
-    color: black;
-    background-color: rgb(230, 227, 227);
     cursor: pointer;
 }
 
