@@ -24,8 +24,9 @@ All relevant documentation can be found in the `docs` folder.
 * [Critical Design Review Document (CDRD)](docs/CDRD-Version1.pdf)
 * [Critical Design Review Presentation (CDR)](docs/CDR-Presentation.pdf)
 * [Code Inspection Report (CIR)](docs/CIR-Version1.pdf)
-* User Guide (UG)
-* Admin Manual (AM)
+* [User Guide (UG)](docs/UserGuide-Version1.pdf)
+* [Admin Manual (AM)](docs/AdministratorManual-Version1.pdf)
+* [Acceptance Testing Presentation](docs/AcceptanceTest-Presentation.pdf)
 
 ## Development
 
