@@ -175,7 +175,7 @@ h1#underheader-text {
 
 }
 
-.footer-page{
+.footer-page {
     box-sizing: border-box;
     width: 100vw;
     height: 75px;
@@ -190,6 +190,20 @@ h1#underheader-text {
     border-bottom-width: 0px;
     border-left-width: 0px;
     border-right-width: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-address .footer-contact {
+    overflow: visible;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "EB Garamond", serif;
+    color: #003263;
+    font-size: 20px;
+    letter-spacing: 0px;
+    line-height: 1.2;
+    padding-bottom: 40px;
 }
 
 html, body {

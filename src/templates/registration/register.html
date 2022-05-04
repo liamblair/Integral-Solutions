@@ -16,13 +16,14 @@
 {% load static %}
 
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'accounts/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/accounts/styles.css' %}">
 {% endblock %}
 
 {% block title %}Create Account{% endblock %}
 
 {% block content %}
 
+<!-- TODO: change to bootstrap grid layout -->
 <form method="post">
   {% csrf_token %}
   <div class="form-all">
@@ -81,7 +82,17 @@
       </div>
     </div>
   </div>
-  <button class="sub-btn" type="submit">Create Account</button>
+  <div class="container-fluid">
+    <div class="row">  
+      <div class="col-xs-12">
+        <div class="text-center">
+          <!-- TODO: Fix buttons to be in line -->
+          <button class="sub-btn" type="submit">Create Account</button>
+          <a href="/accounts/login" class="btn btn-secondary" role="button">Back</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </form>
 
 {% if errors %}
